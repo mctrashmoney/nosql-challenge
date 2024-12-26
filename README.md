@@ -23,11 +23,11 @@ mongoimport --type json -d uk_food --collection establishments --drop --jsonArra
 * Second datafase created were establishments in London with a `RatingValue` `$gte`:4
 * Third datafase displays the top 5 establishments with the lowest hygiene score near the new restaurant added.
   * Note: for the coordinates in this section, we simply look back at the previous document that displays it. If not, use this code and replace the integers for the variables for any other establishment to make it reusable.
-        ```python
-        restaurant = establishments.find_one({"BusinessName": "Penang Flavours"}, {"geocode.latitude": 1, "geocode.longitude": 1})
-        latitude = restaurant["geocode"]["latitude"]
-        longitude = restaurant["geocode"]["longitude"]
-        ```
+```python
+restaurant = establishments.find_one({"BusinessName": "Penang Flavours"}, {"geocode.latitude": 1, "geocode.longitude": 1})
+latitude = restaurant["geocode"]["latitude"]
+longitude = restaurant["geocode"]["longitude"]
+```
 
 ## Part Four
 

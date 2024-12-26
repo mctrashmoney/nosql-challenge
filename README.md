@@ -18,10 +18,10 @@ mongoimport --type json -d uk_food --collection establishments --drop --jsonArra
 
 ## Part Three
 
-### Analysis of the datafase in the [second document](https://github.com/mctrashmoney/nosql-challenge/blob/main/Starter_Code/NoSQL_analysis_starter.ipynb)
-* First datafase created were hygiene scores of 20
-* Second datafase created were establishments in London with a `RatingValue` `$gte`:4
-* Third datafase displays the top 5 establishments with the lowest hygiene score near the new restaurant added.
+### Analysis of the dataframe in the [second document](https://github.com/mctrashmoney/nosql-challenge/blob/main/Starter_Code/NoSQL_analysis_starter.ipynb)
+* First dataframe created were hygiene scores of 20
+* Second dataframe created were establishments in London with a `RatingValue` `$gte`:4
+* Third dataframe displays the top 5 establishments with the lowest hygiene score near the new restaurant added.
   * Note: for the coordinates in this section, we simply look back at the previous document that displays it. If not, use this code and replace the integers for the variables for any other establishment to make it reusable.
 ```python
 restaurant = establishments.find_one({"BusinessName": "Penang Flavours"}, {"geocode.latitude": 1, "geocode.longitude": 1})
